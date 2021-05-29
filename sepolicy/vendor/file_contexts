@@ -57,3 +57,6 @@
 
 # AC Kcal
 /sys/devices/platform/kcal_ctrl.0(/.*)?    u:object_r:sysfs_kcal:s0
+
+# USB
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.xiaomi_sdm660                                           u:object_r:hal_usb_default_exec:s0
