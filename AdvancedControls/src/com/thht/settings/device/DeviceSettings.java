@@ -47,7 +47,6 @@ public class DeviceSettings extends PreferenceActivity implements
 
     private static final String TAG = "thhtKCAL";
 
-    public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
     public static final String KEY_KCAL_RGB_RED = "kcal_rgb_red";
@@ -65,7 +64,6 @@ public class DeviceSettings extends PreferenceActivity implements
     public static final String KEY_KCAL_EXTRAS = "key_kcal_extras";
 
 
-    private VibratorStrengthPreference mVibratorStrength;
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
     private SwitchPreference restoreOnBootPreference;
@@ -83,11 +81,6 @@ public class DeviceSettings extends PreferenceActivity implements
 
         getListView().setDivider(new ColorDrawable(Color.TRANSPARENT));
         getListView().setDividerHeight(0);
-
-        mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        if (mVibratorStrength != null) {
-            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
-        }
 
         mYellowTorchBrightness = (YellowTorchBrightnessPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
         if (mYellowTorchBrightness != null) {
