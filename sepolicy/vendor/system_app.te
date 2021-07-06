@@ -11,4 +11,3 @@ allow system_app sysfs_kcal:file rw_file_perms;
 allow system_app sysfs_torch:dir search;
 allow system_app sysfs_torch:file rw_file_perms;
 allow system_app sysfs_leds:dir search;
-allow system_app sysfs_leds:file rw_file_perms;
